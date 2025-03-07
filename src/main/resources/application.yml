@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: app-gestion-usuarios-api
+  main:
+    banner-mode: off
+  datasource:
+    url: jdbc:sqlserver://;serverName=localhost;databaseName=ptecnica;encrypt=false;trustServerCertificate=true;
+    username: dchavarro
+    password: welcome1
+    connection-test-query: Select 1
+    allow-pool-suspension: true
+    maximum-pool-size: 15
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    database-platform: org.hibernate.dialect.SQLServerDialect
+    properties:
+      hibernate:
+        default_schema: dbo
+        jdbc:
+          lob:
+            non-contextual-creation: true
+jwt:
+  secret: key-ptecnica
+token:
+  tiempo-valido: 18000
+seguridad:
+   llave: keydcx
